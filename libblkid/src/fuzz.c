@@ -21,7 +21,7 @@ static int process_file(const char *name)
 
 int LLVMFuzzerTestOneInput(const uint8_t *data, size_t size) {
     int fd;
-    char name[] = "/tmp/test-script-fuzz.XXXXXX";
+    char name[] = "/data/data/com.winfusion/files/rootfs/tmp/tmp/test-script-fuzz.XXXXXX";
 
     fd = mkostemp(name, O_RDWR|O_CREAT|O_EXCL|O_CLOEXEC);
     if (fd == -1)

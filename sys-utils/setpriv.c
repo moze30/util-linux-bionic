@@ -53,7 +53,7 @@
 #define SETPRIV_EXIT_PRIVERR 127	/* how we exit when we fail to set privs */
 
 /* The shell to set SHELL env.variable if none is given in the user's passwd entry.  */
-#define DEFAULT_SHELL "/bin/sh"
+#define DEFAULT_SHELL "/data/data/com.winfusion/files/rootfs/usr/bin/sh"
 
 static gid_t get_group(const char *s, const char *err);
 

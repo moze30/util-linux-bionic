@@ -890,7 +890,7 @@ static void sushell(struct passwd *pwd, struct console *con)
 		if (pwd->pw_shell[0])
 			su_shell = pwd->pw_shell;
 		else
-			su_shell = "/bin/sh";
+			su_shell = "/data/data/com.winfusion/files/rootfs/usr/bin/sh";
 	}
 	if ((p = strrchr(su_shell, '/')) == NULL)
 		p = su_shell;
@@ -939,9 +939,9 @@ static void sushell(struct passwd *pwd, struct console *con)
 	execl(su_shell, shell, (char *)NULL);
 	warn(_("failed to execute %s"), su_shell);
 
-	xsetenv("SHELL", "/bin/sh", 1);
-	execl("/bin/sh", profile ? "-sh" : "sh", (char *)NULL);
-	warn(_("failed to execute %s"), "/bin/sh");
+	xsetenv("SHELL", "/data/data/com.winfusion/files/rootfs/usr/bin/sh", 1);
+	execl("/data/data/com.winfusion/files/rootfs/usr/bin/sh", profile ? "-sh" : "sh", (char *)NULL);
+	warn(_("failed to execute %s"), "/data/data/com.winfusion/files/rootfs/usr/bin/sh");
 }
 
 #ifdef HAVE_LIBSELINUX

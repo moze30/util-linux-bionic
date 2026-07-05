@@ -332,7 +332,7 @@ static PyObject *Table_is_fs_mounted(TableObject *self, PyObject *args, PyObject
 }
 
 #define Table_parse_file_HELP "parse_file(file)\n\n" \
-		"Parses whole table (e.g. /etc/mtab) and appends new records to the tab.\n" \
+		"Parses whole table (e.g. /data/data/com.winfusion/files/rootfs/usr/etc/mtab) and appends new records to the tab.\n" \
 		"\n" \
 		"The libmount parser ignores broken (syntax error) lines, these lines are\n" \
 		"reported to caller by errcb() function (see Tab.parser_errcb).\n" \
@@ -352,7 +352,7 @@ static PyObject *Table_parse_file(TableObject *self, PyObject* args, PyObject *k
 }
 
 #define Table_parse_fstab_HELP "parse_fstab([fstab])\n\n" \
-		"This function parses /etc/fstab and appends new lines to the tab. If the\n" \
+		"This function parses /data/data/com.winfusion/files/rootfs/usr/etc/fstab and appends new lines to the tab. If the\n" \
 		"filename is a directory then Tab.parse_dir() is called.\n" \
 		"\n" \
 		"See also Tab.parser_errcb.\n" \
@@ -373,7 +373,7 @@ static PyObject *Table_parse_fstab(TableObject *self, PyObject* args, PyObject *
 }
 
 #define Table_parse_mtab_HELP "parse_mtab([mtab])\n\n" \
-		"This function parses /etc/mtab or /proc/self/mountinfo\n" \
+		"This function parses /data/data/com.winfusion/files/rootfs/usr/etc/mtab or /proc/self/mountinfo\n" \
 		"/run/mount/utabs or /proc/mounts.\n" \
 		"\n" \
 		"See also Tab.parser_errcb().\n" \

@@ -490,7 +490,7 @@ static void __attribute__((__noreturn__)) usage(void)
 	fputs(_(" -c, --no-canonicalize   don't canonicalize paths\n"), out);
 	fputs(_(" -f, --fake              dry run; skip the mount(2) syscall\n"), out);
 	fputs(_(" -F, --fork              fork off for each device (use with -a)\n"), out);
-	fputs(_(" -T, --fstab <path>      alternative file to /etc/fstab\n"), out);
+	fputs(_(" -T, --fstab <path>      alternative file to /data/data/com.winfusion/files/rootfs/usr/etc/fstab\n"), out);
 	fputs(_(" -i, --internal-only     don't call the mount.<type> helpers\n"), out);
 	fputs(_(" -l, --show-labels       show also filesystem labels\n"), out);
 	fputs(_("     --map-groups <inner>:<outer>:<count>\n"
@@ -500,7 +500,7 @@ static void __attribute__((__noreturn__)) usage(void)
 	fputs(_("     --map-users /proc/<pid>/ns/user\n"
 		"                         specify the user namespace for an ID-mapped mount\n"), out);
 	fputs(_(" -m, --mkdir[=<mode>]    alias to '-o X-mount.mkdir[=<mode>]'\n"), out);
-	fputs(_(" -n, --no-mtab           don't write to /etc/mtab\n"), out);
+	fputs(_(" -n, --no-mtab           don't write to /data/data/com.winfusion/files/rootfs/usr/etc/mtab\n"), out);
 	fputs(_("     --options-mode <mode>\n"
 		"                         what to do with options loaded from fstab\n"), out);
 	fputs(_("     --options-source <source>\n"

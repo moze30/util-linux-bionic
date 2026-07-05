@@ -19,77 +19,69 @@
 /* DEFPATHs from <paths.h> don't include /usr/local */
 #undef _PATH_DEFPATH
 
-#ifdef USE_USRDIR_PATHS_ONLY
-# define _PATH_DEFPATH	        "/usr/local/bin:/usr/bin"
-#else
-# define _PATH_DEFPATH	        "/usr/local/bin:/bin:/usr/bin"
-#endif
+#define _PATH_DEFPATH	        "/data/data/com.winfusion/files/rootfs/usr/bin"
 
 #undef _PATH_DEFPATH_ROOT
 
-#ifdef USE_USRDIR_PATHS_ONLY
-# define _PATH_DEFPATH_ROOT	"/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin"
-#else
-# define _PATH_DEFPATH_ROOT	"/usr/local/sbin:/usr/local/bin:/sbin:/bin:/usr/sbin:/usr/bin"
-#endif
+#define _PATH_DEFPATH_ROOT	"/data/data/com.winfusion/files/rootfs/usr/bin"
 
 #define	_PATH_HUSHLOGIN		".hushlogin"
-#define	_PATH_HUSHLOGINS	"/etc/hushlogins"
+#define	_PATH_HUSHLOGINS	"/data/data/com.winfusion/files/rootfs/usr/etc/hushlogins"
 
-#define _PATH_NOLOGIN_TXT	"/etc/nologin.txt"
+#define _PATH_NOLOGIN_TXT	"/data/data/com.winfusion/files/rootfs/usr/etc/nologin.txt"
 
 #ifndef _PATH_MAILDIR
-# define _PATH_MAILDIR		"/var/spool/mail"
+# define _PATH_MAILDIR		"/data/data/com.winfusion/files/rootfs/usr/var/spool/mail"
 #endif
-#define	_PATH_MOTDFILE		"/usr/share/misc/motd:/run/motd:/etc/motd"
+#define	_PATH_MOTDFILE		"/data/data/com.winfusion/files/rootfs/usr/share/misc/motd:/data/data/com.winfusion/files/rootfs/usr/run/motd:/data/data/com.winfusion/files/rootfs/usr/etc/motd"
 #ifndef _PATH_NOLOGIN
-# define _PATH_NOLOGIN		"/etc/nologin"
+# define _PATH_NOLOGIN		"/data/data/com.winfusion/files/rootfs/usr/etc/nologin"
 #endif
-#define	_PATH_VAR_NOLOGIN	"/var/run/nologin"
+#define	_PATH_VAR_NOLOGIN	"/data/data/com.winfusion/files/rootfs/usr/var/run/nologin"
 
 #ifndef _PATH_LOGIN
-# define _PATH_LOGIN		"/bin/login"
+# define _PATH_LOGIN		"/data/data/com.winfusion/files/rootfs/usr/bin/login"
 #endif
-#define _PATH_SHUTDOWN		"/sbin/shutdown"
-#define _PATH_POWEROFF		"/sbin/poweroff"
+#define _PATH_SHUTDOWN		"/data/data/com.winfusion/files/rootfs/usr/bin/shutdown"
+#define _PATH_POWEROFF		"/data/data/com.winfusion/files/rootfs/usr/bin/poweroff"
 
 #define _PATH_TERMCOLORS_DIRNAME "terminal-colors.d"
-#define _PATH_TERMCOLORS_DIR	"/etc/" _PATH_TERMCOLORS_DIRNAME
+#define _PATH_TERMCOLORS_DIR	"/data/data/com.winfusion/files/rootfs/usr/etc/" _PATH_TERMCOLORS_DIRNAME
 
 /* login paths */
-#define _PATH_PASSWD		"/etc/passwd"
-#define _PATH_GSHADOW		"/etc/gshadow"
-#define _PATH_GROUP		"/etc/group"
-#define _PATH_SHADOW_PASSWD	"/etc/shadow"
-#define _PATH_SHELLS		"/etc/shells"
+#define _PATH_PASSWD		"/data/data/com.winfusion/files/rootfs/usr/etc/passwd"
+#define _PATH_GSHADOW		"/data/data/com.winfusion/files/rootfs/usr/etc/gshadow"
+#define _PATH_GROUP		"/data/data/com.winfusion/files/rootfs/usr/etc/group"
+#define _PATH_SHADOW_PASSWD	"/data/data/com.winfusion/files/rootfs/usr/etc/shadow"
+#define _PATH_SHELLS		"/data/data/com.winfusion/files/rootfs/usr/etc/shells"
 
 #ifndef _PATH_TMP
-# define _PATH_TMP		"/tmp/"
+# define _PATH_TMP		"/data/data/com.winfusion/files/rootfs/tmp/tmp/"
 #endif
 
 #ifndef _PATH_BTMP
-# define _PATH_BTMP		"/var/log/btmp"
+# define _PATH_BTMP		"/data/data/com.winfusion/files/rootfs/usr/var/log/btmp"
 #endif
 
 #define _PATH_ISSUE_FILENAME	"issue"
 #define _PATH_ISSUE_DIRNAME	_PATH_ISSUE_FILENAME ".d"
 
-#define _PATH_ISSUE		"/etc/" _PATH_ISSUE_FILENAME
-#define _PATH_ISSUEDIR		"/etc/" _PATH_ISSUE_DIRNAME
+#define _PATH_ISSUE		"/data/data/com.winfusion/files/rootfs/usr/etc/" _PATH_ISSUE_FILENAME
+#define _PATH_ISSUEDIR		"/data/data/com.winfusion/files/rootfs/usr/etc/" _PATH_ISSUE_DIRNAME
 
-#define _PATH_OS_RELEASE_ETC	"/etc/os-release"
-#define _PATH_OS_RELEASE_USR	"/usr/lib/os-release"
+#define _PATH_OS_RELEASE_ETC	"/data/data/com.winfusion/files/rootfs/usr/etc/os-release"
+#define _PATH_OS_RELEASE_USR	"/data/data/com.winfusion/files/rootfs/usr/lib/os-release"
 #define _PATH_NUMLOCK_ON	_PATH_RUNSTATEDIR "/numlock-on"
-#define _PATH_LOGINDEFS		"/etc/login.defs"
+#define _PATH_LOGINDEFS		"/data/data/com.winfusion/files/rootfs/usr/etc/login.defs"
 
 #define _PATH_SD_UNITSLOAD	_PATH_RUNSTATEDIR "/systemd/systemd-units-load"
 
 /* misc paths */
-#define _PATH_WORDS             "/usr/share/dict/words"
-#define _PATH_WORDS_ALT         "/usr/share/dict/web2"
+#define _PATH_WORDS             "/data/data/com.winfusion/files/rootfs/usr/share/dict/words"
+#define _PATH_WORDS_ALT         "/data/data/com.winfusion/files/rootfs/usr/share/dict/web2"
 
 /* mount paths */
-#define _PATH_FILESYSTEMS	"/etc/filesystems"
+#define _PATH_FILESYSTEMS	"/data/data/com.winfusion/files/rootfs/usr/etc/filesystems"
 #define _PATH_PROC		"/proc"
 #define _PATH_PROC_SWAPS	"/proc/swaps"
 #define _PATH_PROC_FILESYSTEMS	"/proc/filesystems"
@@ -101,8 +93,8 @@
 #define _PATH_PROC_CDROMINFO	"/proc/sys/dev/cdrom/info"
 
 /* unshare paths */
-#define _PATH_SUBUID		"/etc/subuid"
-#define _PATH_SUBGID		"/etc/subgid"
+#define _PATH_SUBUID		"/data/data/com.winfusion/files/rootfs/usr/etc/subuid"
+#define _PATH_SUBGID		"/data/data/com.winfusion/files/rootfs/usr/etc/subgid"
 #define _PATH_PROC_UIDMAP	"/proc/self/uid_map"
 #define _PATH_PROC_GIDMAP	"/proc/self/gid_map"
 #define _PATH_PROC_SETGROUPS	"/proc/self/setgroups"
@@ -130,7 +122,7 @@
 # ifdef MOUNTED					/* deprecated */
 #  define _PATH_MOUNTED		MOUNTED
 # else
-#  define _PATH_MOUNTED		"/etc/mtab"
+#  define _PATH_MOUNTED		"/data/data/com.winfusion/files/rootfs/usr/etc/mtab"
 # endif
 #endif
 
@@ -138,7 +130,7 @@
 # ifdef MNTTAB					/* deprecated */
 #  define _PATH_MNTTAB		MNTTAB
 # else
-#  define _PATH_MNTTAB		"/etc/fstab"
+#  define _PATH_MNTTAB		"/data/data/com.winfusion/files/rootfs/usr/etc/fstab"
 # endif
 #endif
 
@@ -149,26 +141,26 @@
 # define _PATH_DEV		"/dev/"
 #endif
 
-#define _PATH_DEV_MAPPER	"/dev/mapper"
+#define _PATH_DEV_MAPPER	"/dev/block/mapper"
 
 #define _PATH_DEV_MEM		"/dev/mem"
 
-#define _PATH_DEV_LOOP		"/dev/loop"
+#define _PATH_DEV_LOOP		"/dev/block/loop"
 #define _PATH_DEV_LOOPCTL	"/dev/loop-control"
 
 /* udev paths */
-#define _PATH_DEV_BYLABEL	"/dev/disk/by-label"
-#define _PATH_DEV_BYUUID	"/dev/disk/by-uuid"
-#define _PATH_DEV_BYID		"/dev/disk/by-id"
-#define _PATH_DEV_BYPATH	"/dev/disk/by-path"
-#define _PATH_DEV_BYPARTLABEL	"/dev/disk/by-partlabel"
-#define _PATH_DEV_BYPARTUUID	"/dev/disk/by-partuuid"
+#define _PATH_DEV_BYLABEL	"/dev/block/by-label"
+#define _PATH_DEV_BYUUID	"/dev/block/by-uuid"
+#define _PATH_DEV_BYID		"/dev/block/by-id"
+#define _PATH_DEV_BYPATH	"/dev/block/by-path"
+#define _PATH_DEV_BYPARTLABEL	"/dev/block/by-partlabel"
+#define _PATH_DEV_BYPARTUUID	"/dev/block/by-partuuid"
 
 /* hwclock paths */
 #ifdef CONFIG_ADJTIME_PATH
 # define _PATH_ADJTIME		CONFIG_ADJTIME_PATH
 #else
-# define _PATH_ADJTIME		"/etc/adjtime"
+# define _PATH_ADJTIME		"/data/data/com.winfusion/files/rootfs/usr/etc/adjtime"
 #endif
 
 #ifdef __ia64__

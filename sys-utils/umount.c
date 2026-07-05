@@ -96,7 +96,7 @@ static void __attribute__((__noreturn__)) usage(void)
 	fputs(_("     --fake              dry run; skip the umount(2) syscall\n"), out);
 	fputs(_(" -f, --force             force unmount (in case of an unreachable NFS system)\n"), out);
 	fputs(_(" -i, --internal-only     don't call the umount.<type> helpers\n"), out);
-	fputs(_(" -n, --no-mtab           don't write to /etc/mtab\n"), out);
+	fputs(_(" -n, --no-mtab           don't write to /data/data/com.winfusion/files/rootfs/usr/etc/mtab\n"), out);
 	fputs(_(" -l, --lazy              detach the filesystem now, clean up things later\n"), out);
 	fputs(_(" -O, --test-opts <list>  limit the set of filesystems (use with -a)\n"), out);
 	fputs(_(" -R, --recursive         recursively unmount a target with all its children\n"), out);

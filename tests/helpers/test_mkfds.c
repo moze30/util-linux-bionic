@@ -96,7 +96,7 @@ static void __attribute__((__noreturn__)) usage(FILE *out, int status)
 
 	fputs("\n", out);
 	fputs("Examples:\n", out);
-	fprintf(out, "Using 3, open /etc/group:\n\n	$ %s ro-regular-file 3 file=/etc/group\n\n",
+	fprintf(out, "Using 3, open /system/etc/group:\n\n	$ %s ro-regular-file 3 file=/system/etc/group\n\n",
 		program_invocation_short_name);
 	fprintf(out, "Using 3 and 4, make a pipe:\n\n	$ %s pipe-no-fork 3 4\n\n",
 		program_invocation_short_name);
@@ -3306,7 +3306,7 @@ static const struct factory factories[] = {
 				.name = "file",
 				.type = PTYPE_STRING,
 				.desc = "file to be opened",
-				.defv.string = "/etc/passwd",
+				.defv.string = "/system/etc/passwd",
 			},
 			{
 				.name = "offset",
@@ -3572,7 +3572,7 @@ static const struct factory factories[] = {
 				.name = "path",
 				.type = PTYPE_STRING,
 				.desc = "path for listening-socket bound to",
-				.defv.string = "/tmp/test_mkfds-unix-stream",
+				.defv.string = "/data/data/com.winfusion/files/rootfs/tmp/tmp/test_mkfds-unix-stream",
 			},
 			{
 				.name = "backlog",
@@ -3619,7 +3619,7 @@ static const struct factory factories[] = {
 				.name = "path",
 				.type = PTYPE_STRING,
 				.desc = "path for unix non-stream bound to",
-				.defv.string = "/tmp/test_mkfds-unix-dgram",
+				.defv.string = "/data/data/com.winfusion/files/rootfs/tmp/tmp/test_mkfds-unix-dgram",
 			},
 			{
 				.name = "abstract",
@@ -3648,7 +3648,7 @@ static const struct factory factories[] = {
 				.name = "path",
 				.type = PTYPE_STRING,
 				.desc = "path for unix non-stream bound to",
-				.defv.string = "/tmp/test_mkfds-unix-in-netns",
+				.defv.string = "/data/data/com.winfusion/files/rootfs/tmp/tmp/test_mkfds-unix-in-netns",
 			},
 			{
 				.name = "abstract",

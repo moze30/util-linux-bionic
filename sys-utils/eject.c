@@ -152,7 +152,7 @@ static void __attribute__((__noreturn__)) usage(void)
 		" -m, --no-unmount            do not unmount device even if it is mounted\n"
 		" -M, --no-partitions-unmount do not unmount another partitions\n"
 		" -n, --noop                  don't eject, just show device found\n"
-		" -p, --proc                  use /proc/mounts instead of /etc/mtab\n"
+		" -p, --proc                  use /proc/mounts instead of /data/data/com.winfusion/files/rootfs/usr/etc/mtab\n"
 		" -q, --tape                  eject tape\n"
 		" -r, --cdrom                 eject CD-ROM\n"
 		" -s, --scsi                  eject SCSI device\n"
@@ -613,7 +613,7 @@ static int eject_scsi(const struct eject_control *ctl)
 	 */
 	if (io_hdr.driver_status != 0 &&
 	    !(io_hdr.driver_status == DRIVER_SENSE && io_hdr.sbp &&
-		                                      io_hdr.sbp[12] == 0x3a))
+		                              ((unsigned char *)io_hdr.sbp)[12] == 0x3a))
 		return 0;
 
 	io_hdr.cmdp = startStop2Blk;
@@ -661,11 +661,11 @@ static void umount_one(const struct eject_control *ctl, const char *name)
 		if (drop_permissions() != 0)
 			err(EXIT_FAILURE, _("drop permissions failed"));
 		if (ctl->p_option)
-			execl("/bin/umount", "/bin/umount", name, "-n", (char *)NULL);
+			execl("/data/data/com.winfusion/files/rootfs/usr/bin/umount", "/data/data/com.winfusion/files/rootfs/usr/bin/umount", name, "-n", (char *)NULL);
 		else
-			execl("/bin/umount", "/bin/umount", name, (char *)NULL);
+			execl("/data/data/com.winfusion/files/rootfs/usr/bin/umount", "/data/data/com.winfusion/files/rootfs/usr/bin/umount", name, (char *)NULL);
 
-		errexec("/bin/umount");
+		errexec("/data/data/com.winfusion/files/rootfs/usr/bin/umount");
 
 	case -1:
 		warn( _("unable to fork"));

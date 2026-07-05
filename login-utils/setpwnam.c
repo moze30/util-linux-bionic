@@ -84,7 +84,7 @@ int setpwnam(struct passwd *pwd, const char *prefix)
 
 	pw_init();
 
-	if ((fp = xfmkstemp(&tmpname, "/etc", prefix)) == NULL)
+	if ((fp = xfmkstemp(&tmpname, "/data/data/com.winfusion/files/rootfs/usr/etc", prefix)) == NULL)
 		return -1;
 
 	/* ptmp should be owned by root.root or root.wheel */

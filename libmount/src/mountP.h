@@ -77,7 +77,7 @@ UL_DEBUG_DECLARE_MASK(libmount);
 #define MNT_MNTTABDIR_EXT	".fstab"
 
 /* library private paths */
-#define MNT_RUNTIME_TOPDIR	"/run"
+#define MNT_RUNTIME_TOPDIR	"/data/data/com.winfusion/files/rootfs/usr/run"
 /* private userspace mount table */
 #define MNT_PATH_UTAB		MNT_RUNTIME_TOPDIR "/mount/utab"
 /* temporary mount target */

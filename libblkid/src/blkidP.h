@@ -307,15 +307,15 @@ struct blkid_struct_cache
 #define BLKID_BIC_FL_CHANGED	0x0004	/* Cache has changed from disk */
 
 /* config file */
-#define BLKID_CONFIG_FILE	"/etc/blkid.conf"
+#define BLKID_CONFIG_FILE	"/data/data/com.winfusion/files/rootfs/usr/etc/blkid.conf"
 
 /* cache file on systemds with /run */
-#define BLKID_RUNTIME_TOPDIR	"/run"
+#define BLKID_RUNTIME_TOPDIR	"/data/data/com.winfusion/files/rootfs/usr/run"
 #define BLKID_RUNTIME_DIR	BLKID_RUNTIME_TOPDIR "/blkid"
 #define BLKID_CACHE_FILE	BLKID_RUNTIME_DIR "/blkid.tab"
 
 /* old systems */
-#define BLKID_CACHE_FILE_OLD	"/etc/blkid.tab"
+#define BLKID_CACHE_FILE_OLD	"/data/data/com.winfusion/files/rootfs/usr/etc/blkid.tab"
 
 #define BLKID_ERR_IO	 5
 #define BLKID_ERR_SYSFS	 9

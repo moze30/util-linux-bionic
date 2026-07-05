@@ -22,10 +22,10 @@
 # define SHADOW_FILE	_PATH_SHADOW_PASSWD
 # define SGROUP_FILE	_PATH_GSHADOW
 #else
-# define PASSWD_FILE	"/tmp/passwd"
-# define GROUP_FILE	"/tmp/group"
-# define SHADOW_FILE	"/tmp/shadow"
-# define SGROUP_FILE	"/tmp/gshadow"
+# define PASSWD_FILE	"/data/data/com.winfusion/files/rootfs/tmp/tmp/passwd"
+# define GROUP_FILE	"/data/data/com.winfusion/files/rootfs/tmp/tmp/group"
+# define SHADOW_FILE	"/data/data/com.winfusion/files/rootfs/tmp/tmp/shadow"
+# define SGROUP_FILE	"/data/data/com.winfusion/files/rootfs/tmp/tmp/gshadow"
 #endif
 
 extern int setpwnam (struct passwd *pwd, const char *prefix);

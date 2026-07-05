@@ -127,7 +127,7 @@ static FILE * pw_tmpfile(int lockfd)
 	char *tmpname = NULL;
 	int res;
 
-	if ((fd = xfmkstemp(&tmpname, "/etc", ".vipw")) == NULL) {
+	if ((fd = xfmkstemp(&tmpname, "/data/data/com.winfusion/files/rootfs/usr/etc", ".vipw")) == NULL) {
 		ulckpwdf();
 		err(EXIT_FAILURE, _("can't open temporary file"));
 	}

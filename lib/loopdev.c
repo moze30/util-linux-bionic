@@ -128,13 +128,13 @@ int loopcxt_set_device(struct loopdev_cxt *lc, const char *device)
 	/* set new */
 	if (device) {
 		if (*device != '/') {
-			const char *dir = _PATH_DEV;
+			const char *dir = _PATH_DEV "block/";
 
 			/* compose device name for /dev/loop<n> or /dev/loop/<n> */
 			if (lc->flags & LOOPDEV_FL_DEVSUBDIR) {
-				if (strlen(device) < 5)
+				if (strlen(device) < 11)
 					return -1;
-				device += 4;
+				device += 10;
 				dir = _PATH_DEV_LOOP "/";	/* _PATH_DEV uses tailing slash */
 			}
 			snprintf(lc->device, sizeof(lc->device), "%s%s",

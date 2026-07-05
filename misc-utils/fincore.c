@@ -45,10 +45,9 @@
 
 #ifndef HAVE_CACHESTAT
 
-#ifndef SYS_cachestat
-#define SYS_cachestat 451
-#endif
-
+/* The kernel UAPI header <linux/mman.h> (pulled in by <sys/mman.h> on
+ * Bionic with recent NDK) may already define these structs. */
+#ifndef _UAPI_LINUX_MMAN_H
 struct cachestat_range {
 	uint64_t off;
 	uint64_t len;
@@ -61,6 +60,11 @@ struct cachestat {
 	uint64_t nr_evicted;
 	uint64_t nr_recently_evicted;
 };
+#endif /* _UAPI_LINUX_MMAN_H */
+
+#ifndef SYS_cachestat
+#define SYS_cachestat 451
+#endif
 
 static inline int cachestat(unsigned int fd,
 			    const struct cachestat_range *cstat_range,

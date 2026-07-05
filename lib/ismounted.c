@@ -182,7 +182,7 @@ static int check_mntent(const char *file, int *mount_flags,
 	int	retval;
 
 #ifdef DEBUG
-	retval = check_mntent_file("/tmp/mtab", file, mount_flags,
+	retval = check_mntent_file("/data/data/com.winfusion/files/rootfs/tmp/tmp/mtab", file, mount_flags,
 				   mtpt, mtlen);
 	if (retval == 0)
 		return 0;

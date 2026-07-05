@@ -1636,7 +1636,7 @@ int fdisk_apply_script(struct fdisk_context *cxt, struct fdisk_script *dp)
 
 int LLVMFuzzerTestOneInput(const uint8_t *data, size_t size)
 {
-	char name[] = "/tmp/test-script-fuzz.XXXXXX";
+	char name[] = "/data/data/com.winfusion/files/rootfs/tmp/tmp/test-script-fuzz.XXXXXX";
 	int fd;
 	struct fdisk_script *dp;
 	struct fdisk_context *cxt;

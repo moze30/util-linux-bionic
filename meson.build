@@ -29,8 +29,8 @@ sbindir = join_paths(prefixdir, get_option('sbindir'))
 sysconfstaticdir = join_paths(prefixdir, 'lib')
 docdir = join_paths(prefixdir, get_option('datadir'), 'doc', 'util-linux')
 mandir = join_paths(prefixdir, get_option('mandir'))
-runstatedir = '/run'
-localstatedir = '/var'
+runstatedir = '/data/data/com.winfusion/files/rootfs/usr/run'
+localstatedir = '/data/data/com.winfusion/files/rootfs/usr/var'
 execprefixdir = prefixdir
 sysconfdir = join_paths(prefixdir, get_option('sysconfdir'))
 usrbin_exec_dir = join_paths(execprefixdir, bindir)
@@ -76,8 +76,8 @@ conf.set('docdir', docdir)
 conf.set_quoted('_PATH_SYSCONFSTATICDIR', sysconfstaticdir)
 conf.set_quoted('_PATH_RUNSTATEDIR', runstatedir)
 conf.set_quoted('_PATH_LOCALSTATEDIR', localstatedir)
-conf.set_quoted('CONFIG_ADJTIME_PATH', '/etc/adjtime')
-conf.set_quoted('ADJTIME_PATH', '/etc/adjtime') # yes, both are used :(
+conf.set_quoted('CONFIG_ADJTIME_PATH', '/data/data/com.winfusion/files/rootfs/usr/etc/adjtime')
+conf.set_quoted('ADJTIME_PATH', '/data/data/com.winfusion/files/rootfs/usr/etc/adjtime') # yes, both are used :(
 
 if vendordir != ''
   conf.set_quoted('_PATH_VENDORDIR', vendordir)
@@ -3763,7 +3763,7 @@ if asciidoctor.found()
 	  '-b', 'manpage',
 	  '-a', 'VERSION=' + meson.project_version(),
 	  '-a', 'release-version=' + meson.project_version(),
-	  '-a', 'ADJTIME_PATH=/etc/adjtime',
+	  '-a', 'ADJTIME_PATH=/data/data/com.winfusion/files/rootfs/usr/etc/adjtime',
 	  '-a', 'package-docdir=' + docdir,
 	  '--base-dir=' + meson.current_source_dir(),
           '--destination-dir=' + meson.current_build_dir(),

@@ -58,6 +58,10 @@
 #include "pathnames.h"
 #include "ttymsg.h"
 
+#ifndef MAXNAMLEN
+# define MAXNAMLEN 255
+#endif
+
 #define ERR_BUFLEN	(MAXNAMLEN + 1024)
 
 /*

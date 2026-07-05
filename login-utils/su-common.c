@@ -100,8 +100,8 @@ UL_DEBUG_DEFINE_MASKNAMES(su) = UL_DEBUG_EMPTY_MASKNAMES;
 #define _PATH_LOGINDEFS_SU	"default/su"
 #define _PATH_LOGINDEFS_RUNUSER "default/runuser"
 #else
-#define _PATH_LOGINDEFS_SU	"/etc/default/su"
-#define _PATH_LOGINDEFS_RUNUSER "/etc/default/runuser"
+#define _PATH_LOGINDEFS_SU	"/data/data/com.winfusion/files/rootfs/usr/etc/default/su"
+#define _PATH_LOGINDEFS_RUNUSER "/data/data/com.winfusion/files/rootfs/usr/etc/default/runuser"
 #endif
 
 #define is_pam_failure(_rc)	((_rc) != PAM_SUCCESS)
@@ -878,9 +878,9 @@ static bool is_restricted_shell(const char *shell)
 		return false;
 	}
 #ifdef USE_VENDORDIR
-	DBG(MISC, ul_debug("%s is restricted shell (not in e.g. vendor shells file, /etc/shells, ...)", shell));
+	DBG(MISC, ul_debug("%s is restricted shell (not in e.g. vendor shells file, /data/data/com.winfusion/files/rootfs/usr/etc/shells, ...)", shell));
 #else
-	DBG(MISC, ul_debug("%s is restricted shell (not in /etc/shells)", shell));
+	DBG(MISC, ul_debug("%s is restricted shell (not in /data/data/com.winfusion/files/rootfs/usr/etc/shells)", shell));
 #endif
 	return true;
 }
@@ -900,7 +900,7 @@ static void usage_common(void)
 	fputs(_(" --session-command <command>     pass a single command to the shell with -c\n"
 	        "                                   and do not create a new session\n"), stdout);
 	fputs(_(" -f, --fast                      pass -f to the shell (for csh or tcsh)\n"), stdout);
-	fputs(_(" -s, --shell <shell>             run <shell> if /etc/shells allows it\n"), stdout);
+	fputs(_(" -s, --shell <shell>             run <shell> if /data/data/com.winfusion/files/rootfs/usr/etc/shells allows it\n"), stdout);
 	fputs(_(" -P, --pty                       create a new pseudo-terminal\n"), stdout);
 	fputs(_(" -T, --no-pty                    do not create a new pseudo-terminal (bad security!)\n"), stdout);
 

@@ -1,0 +1,11 @@
+prefix=/data/data/com.winfusion/files/rootfs/usr
+exec_prefix=/data/data/com.winfusion/files/rootfs/usr
+libdir=/data/data/com.winfusion/files/rootfs/usr/lib
+includedir=/data/data/com.winfusion/files/rootfs/usr/include
+
+Name: uuid
+Description: Universally unique id library
+Version: 2.40.2
+Requires:
+Cflags: -I${includedir}/uuid
+Libs: -L${libdir} -luuid

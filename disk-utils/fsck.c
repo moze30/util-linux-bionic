@@ -1124,7 +1124,7 @@ static int ignore(struct libmnt_fs *fs)
 	 * If this is a bind mount, ignore it.
 	 */
 	if (opt_in_list("bind", mnt_fs_get_options(fs))) {
-		warnx(_("%s: skipping bad line in /etc/fstab: "
+		warnx(_("%s: skipping bad line in /data/data/com.winfusion/files/rootfs/usr/etc/fstab: "
 			"bind mount with nonzero fsck pass number"),
 			mnt_fs_get_target(fs));
 		return 1;

@@ -1,0 +1,10 @@
+prefix=/data/data/com.winfusion/files/rootfs/usr
+exec_prefix=/data/data/com.winfusion/files/rootfs/usr
+libdir=/data/data/com.winfusion/files/rootfs/usr/lib
+includedir=/data/data/com.winfusion/files/rootfs/usr/include
+
+Name: blkid
+Description: Block device id library
+Version: 2.40.2
+Cflags: -I${includedir}/blkid
+Libs: -L${libdir} -lblkid

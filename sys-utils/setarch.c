@@ -477,7 +477,7 @@ int main(int argc, char *argv[])
 		/* Don't use ifdef sparc here, we get "Unrecognized architecture"
 		 * error message later if necessary */
 		if (strcmp(arch, "sparc32bash") == 0) {
-			shell = "/bin/bash";
+			shell = "/data/data/com.winfusion/files/rootfs/usr/bin/bash";
 			shell_arg = "";
 			goto set_arch;
 		}
@@ -600,7 +600,7 @@ set_arch:
 		verify_arch_domain(doms, target, arch);
 
 	if (!argc) {
-		shell = "/bin/sh";
+		shell = "/data/data/com.winfusion/files/rootfs/usr/bin/sh";
 		shell_arg = "-sh";
 	}
 	if (verbose) {

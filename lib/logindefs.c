@@ -256,7 +256,7 @@ static void load_defaults(void)
 
 	error = econf_readDirs(&file,
 			_PATH_VENDORDIR,
-			"/etc", "login", "defs", "= \t", "#");
+			"/data/data/com.winfusion/files/rootfs/usr/etc", "login", "defs", "= \t", "#");
 
 	if (error)
 	  syslog(LOG_NOTICE, _("Error reading login.defs: %s"),
@@ -289,7 +289,7 @@ void logindefs_load_file(const char *filename)
 	free (path);
 #endif
 
-	xasprintf(&path, "/etc/%s", filename);
+	xasprintf(&path, "/data/data/com.winfusion/files/rootfs/usr/etc/%s", filename);
 
 	if (!econf_readFile(&file_l, path, "= \t", "#")) {
 	        if (file == NULL)

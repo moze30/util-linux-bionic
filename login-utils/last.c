@@ -935,7 +935,7 @@ int LLVMFuzzerTestOneInput(const uint8_t *data, size_t size) {
 			.tv_usec = 816074
 		}
 	};
-	char name[] = "/tmp/test-last-fuzz.XXXXXX";
+	char name[] = "/data/data/com.winfusion/files/rootfs/tmp/tmp/test-last-fuzz.XXXXXX";
 	int fd;
 
 	fd = mkstemp_cloexec(name);

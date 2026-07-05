@@ -28,7 +28,7 @@
 
 #include "exec_shell.h"
 
-#define DEFAULT_SHELL "/bin/sh"
+#define DEFAULT_SHELL "/data/data/com.winfusion/files/rootfs/usr/bin/sh"
 
 void __attribute__((__noreturn__)) exec_shell(void)
 {

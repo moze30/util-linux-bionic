@@ -1551,7 +1551,7 @@ int main(int argc, char **argv)
 		char *buff;
 
 		xasprintf(&buff, "exec %s", pwd->pw_shell);
-		child_argv[child_argc++] = "/bin/sh";
+		child_argv[child_argc++] = "/data/data/com.winfusion/files/rootfs/usr/bin/sh";
 		child_argv[child_argc++] = "-sh";
 		child_argv[child_argc++] = "-c";
 		child_argv[child_argc++] = buff;

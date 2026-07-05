@@ -1364,7 +1364,7 @@ static void pgfile(FILE *f, const char *name)
 					{
 						const char *sh = getenv("SHELL");
 						if (!sh)
-							sh = "/bin/sh";
+							sh = "/data/data/com.winfusion/files/rootfs/usr/bin/sh";
 						if (!nobuf)
 							fclose(fbuf);
 						fclose(find);

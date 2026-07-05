@@ -294,7 +294,7 @@ static int fstrim_all_from_file(struct fstrim_control *ctl, const char *filename
 		return -1;
 	}
 
-	if (streq_paths(filename, "/etc/fstab"))
+	if (streq_paths(filename, "/data/data/com.winfusion/files/rootfs/usr/etc/fstab"))
 		fstab = 1;
 
 	/* de-duplicate by mountpoints */
@@ -458,7 +458,7 @@ static void __attribute__((__noreturn__)) usage(void)
 
 	fputs(USAGE_OPTIONS, out);
 	fputs(_(" -a, --all                trim mounted filesystems\n"), out);
-	fputs(_(" -A, --fstab              trim filesystems from /etc/fstab\n"), out);
+	fputs(_(" -A, --fstab              trim filesystems from /data/data/com.winfusion/files/rootfs/usr/etc/fstab\n"), out);
 	fputs(_(" -I, --listed-in <list>   trim filesystems listed in specified files\n"), out);
 	fputs(_(" -o, --offset <num>       the offset in bytes to start discarding from\n"), out);
 	fputs(_(" -l, --length <num>       the number of bytes to discard\n"), out);
